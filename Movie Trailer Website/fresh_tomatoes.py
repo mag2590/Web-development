@@ -149,6 +149,8 @@ def create_movie_tiles_content(movies):
         )
     return content
 
+
+
 def open_movies_page(movies):
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
