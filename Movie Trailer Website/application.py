@@ -5,10 +5,10 @@ import fresh_tomatoes
 from imdb import IMDb
 
 #create an instance of IMDb() object
-ia = IMDb()
+imdb_obj = IMDb()
 
-#list of movies to display on
-complete_movie_list=[] the webpage.
+#list of movies to display on the webpage.
+complete_movie_list=[]
 
 #A key,value dict with movie names and trailer url #pairs
 movie_list={"Harry potter and the sorcerer's stone": "https://youtu.be/VyHV0BRtdxo",
@@ -22,8 +22,8 @@ movie_list={"Harry potter and the sorcerer's stone": "https://youtu.be/VyHV0BRtd
 """search movies from the list to get their movieids
 Now use the movieids to fetch other fields"""
 for the_movie, the_trailer in movie_list.items():
-    search_results = ia.search_movie(the_movie)
-    movie_id = ia.get_movie(search_results[0].movieID)
+    search_results = imdb_obj.search_movie(the_movie)
+    movie_id = imdb_obj.get_movie(search_results[0].movieID)
     plot = movie_id.get('plot outline')
     poster = movie_id.get('cover url')
     rating = movie_id.get('rating')
