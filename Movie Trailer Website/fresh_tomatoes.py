@@ -18,7 +18,7 @@ main_page_head = '''
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
-            padding-top: 80px;
+            padding-top: 100px;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -36,11 +36,11 @@ main_page_head = '''
             height: 100%;
         }
         .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
+            margin-bottom: 10px;
+            padding-top: 10px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: grey;
             cursor: pointer;
         }
         .scale-media {
@@ -54,7 +54,7 @@ main_page_head = '''
             width: 100%;
             left: 0;
             top: 0;
-            background-color: white;
+            background-color: green;
         }
 
     </style>
@@ -123,9 +123,9 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+<div class="col-md-5 col-lg-5 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <h2>{movie_title}</h2>
+    <img src="{poster_image_url}" width="220" height="300">
 </div>
 '''
 
@@ -143,9 +143,10 @@ def create_movie_tiles_content(movies):
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
+            movie_title=movie.title,
             poster_image_url=movie.poster_image,
-            trailer_youtube_id=trailer_youtube_id,
-            movie_title=movie.title
+            trailer_youtube_id=trailer_youtube_id
+
         )
     return content
 

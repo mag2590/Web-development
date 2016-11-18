@@ -26,6 +26,8 @@ Note: make sure you have the right permissions to run the above command otherwis
 4. once the above steps are complete, go to 'Movie Trailer Website' folder from the cloned git repo
 
 5. Run the following python file : application.py
+[Steps for mac: 1. cd to the directory of your project on terminal.
+		2. Now type:  python ./application.py]
 
 6. This will open your webpage in the browser and you should be able to see the trailer of your favorite movie by clicking on the poster of that movie.
 
