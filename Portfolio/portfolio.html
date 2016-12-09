@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lnag="en">
+
+    <head>
+        <title>Mohnish Gorasia Portfolio</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script>
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("header");
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                }
+            }
+        });
+    }
+    window.onload = init();
+</script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <header class="header">
+              <div class="container clearfix">
+                <h1 id="logo">MG</h1>
+                <nav>
+                  <a href="#">Portfolio</a>
+                  <a href="#">Blog</a>
+                  <a href="#">About</a>
+                  <a href="#">Contact</a>
+                </nav>
+               </div>
+        </header>
+
+        <div class="container">
+        <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <article>
+                        <h1><strong>Fun Facts about developing a website<strong></h1>
+                        <nav>
+                            <ul class="bigFont">
+                                <li>Your website will only last you about two years.</li>
+                                <li>Your website looks different on other people’s computers.</li>
+                                <li>Your website’s source code influences your search engine ranking.</li>
+                                <li>Images can have a positive or negative impact on your site.</li>
+                                <li>There’s a big difference between responsive design and mobile design.</li>
+                                <li>Your website’s design influences visitor behavior.</li>
+                            </ul>
+                        </nav>
+                    </article>
+                </div>
+
+                <div class="col-md-6">
+                    <h2 <a href="https://github.com/mag2590/Web-development/tree/master/Movie%20Trailer%20Website"></a></h2>
+                    <img id="blah" class="img-responsive" src="images/me_3.jpg" alt="Movie trailer website">
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="noise">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-muted">Featured Work</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="height: 960px;">
+
+                    <ul id="thumbs" class="thumbs clearfix">
+                            <li>
+                                <a>
+                                    <img id="music" src="images/music.jpg" class="img-thumbnail img-responsive" alt="feature-monitor" srcset="images/music.jpg 628w, images/music.jpg 300w" sizes="(max-width: 628px) 100vw, 628px"
+                                    data-toggle="modal" data-target="#project3">                                   <div class="description">
+                                        <span class="arrow-r" style="opacity: 0; right: 0px;"></span>
+                                        <h4>Music Recommendation system</h4>
+                                        <p><mark>Machine Learning</mark></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img id="bank" src="images/bank_coins.jpg" class="img-thumbnail img-responsive"
+                                    alt="A distributed bank" srcset="images/bank_coins.jpg 628w, images/bank_coins.jpg 300w" sizes="(max-width: 628px) 100vw, 628px"
+                                    data-toggle="modal" data-target="#project1">                                 <div class="description">
+                                        <span class="arrow-r" style="opacity: 0; right: 0px;"></span>
+                                        <h4>Distributed Banking System</h4>
+                                        <p><mark>Cloud computing</mark></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img id="nlp" src="images/NLP.jpeg" class="img-thumbnail img-responsive" alt="feature-rethinking-flight-search" srcset="images/nlp.jpg 628w, images/nlp.jpg 300w" sizes="(max-width: 628px) 100vw, 628px"
+                                    data-toggle="modal" data-target="#project2">                                   <div class="description">
+                                        <span class="arrow-r" style="opacity: 0; right: 0px;"></span>
+                                        <h4>Fake review detection</h4>
+                                        <p><mark>Natural Language Processing</mark></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img id="poetry" src="images/poetry.jpg" class="img-thumbnail img-responsive" alt="feature-subscriber-notifications" srcset="images/poetry.jpg 628w, images/poetry.jpg 300w" sizes="(max-width: 628px) 100vw, 628px"
+                                    data-toggle="modal" data-target="#project4">                                   <div class="description">
+                                        <span class="arrow-r" style="opacity: 0; right: 0px;"></span>
+                                        <h4>Poetry Blog</h4>
+                                        <p><mark>HTML/CSS/Bootstrap</mark></p>
+                                    </div>
+                                </a>
+                            </li>
+                     </ul>
+                </div>
+        </section>
+
+
+        <!--Modal-->
+        <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">My first app page</h4>
+                    </div>
+                    <div class="modal-body">
+                    <img class="img-responsive" src="images/bank.jpg">
+                    In this project I develop a distributed banking system that handles basic operations of deposit, widthdrawl, check current balance, open new account etc. The code uses Java for the backend and has a swing based UI. The bank data was sharded across multiple servers and used a master-slave server model.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id ="project2" tabindex="-1" role="dialog" aria-lableledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">My first app page</h4>
+                    </div>
+                    <div class="modal-body">
+                    <img class="img-responsive" src ="images/NLP.jpeg">
+                    I worked on this project when I was doing my masters in computer science. In this project, we used sequence tagging, sentiment analysis and other NLP techniques for detecting authentic movie reviews on a rating website like IMDB and rotten tomatoes.
+                    </div>
+                    <div class= "modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id ="project3" tabindex="10" role="dialog" aria-lableledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">My first app page</h4>
+                    </div>
+                    <div class="modal-body">
+                    <img class="img-responsive" src ="images/music.jpg">
+                    This is a music recommendation system that predicts your taste in music based on the songs you listen currently, and using your feedback combined with Machine Learning techniques/algorithms
+                    </div>
+                    <div class= "modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id ="project4" tabindex="-1" role="dialog" aria-lableledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">My first app page</h4>
+                    </div>
+                    <div class="modal-body">
+                    <img class="img-responsive" src ="images/poetry.jpg">
+                    This is a forum where people can post their poetries and writings. Audience can rate/critic other's work and comment on it. It is a one stop place for writers and poets. The page also has links to all social media forums like facebook, twitter, quora, google plus.
+                    </div>
+                    <div class= "modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

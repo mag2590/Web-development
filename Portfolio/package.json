@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is a portfolio website that uses responsive images and content so that it can be run on any device.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test portfolio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Portfolio website"
+  },
+  "keywords": [
+    "responsive",
+    "portfolio",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Mohnish Gorasia",
+  "license": "ISC"
+}
