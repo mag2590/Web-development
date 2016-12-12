@@ -1,15 +1,13 @@
 body{
     font-family: 'Lato', sans-serif;
-    /*color:#747704;*/
     color: black;
-    /*background-color:#D3D3D3;*/
     font-weight: 300;
     padding-top:125px;
 }
 
 header {
     width: 100%;
-    height: 120px;
+    height: 80px;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -22,10 +20,11 @@ header {
     -o-transition: height 0.3s;
     transition: height 0.3s;
 }
+
 header h1#logo {
     display: inline-block;
-    height: 100px;
-    line-height: 100px;
+    height: 60px;
+    line-height: 60px;
     float: left;
     font-family: "Oswald", sans-serif;
     font-size: 60px;
@@ -37,12 +36,14 @@ header h1#logo {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 header nav {
     display: inline-block;
     float: right;
 }
+
 header nav a {
-    line-height: 150px;
+    line-height: 90px;
     margin-left: 20px;
     color: #9fdbfc;
     font-weight: 700;
@@ -53,20 +54,9 @@ header nav a {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 header nav a:hover {
     color: white;
-}
-header.smaller {
-    height: 75px;
-}
-header.smaller h1#logo {
-    width: 150px;
-    height: 45px;
-    line-height: 45px;
-    font-size: 30px;
-}
-header.smaller nav a {
-    line-height: 75px;
 }
 
 @media all and (max-width: 660px) {
@@ -74,14 +64,14 @@ header.smaller nav a {
         display: block;
         float: none;
         margin: 0 auto;
-        height: 100px;
+        height: 80px;
         line-height: 100px;
         text-align: center;
     }
     header nav {
         display: block;
         float: none;
-        height: 50px;
+        height: 30px;
         text-align: center;
         margin: 0 auto;
     }
@@ -89,190 +79,10 @@ header.smaller nav a {
         line-height: 50px;
         margin: 0 10px;
     }
-    header.smaller {
-        height: 75px;
-    }
-    header.smaller h1#logo {
-        height: 40px;
-        line-height: 40px;
-        font-size: 30px;
-    }
-    header.smaller nav {
-        height: 35px;
-    }
-    header.smaller nav a {
-        line-height: 35px;
-    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-#header{
-    position: relative;
-}
-
-.navbar{
-    height: 100%;
-    position: absolute;
-}
-
-ul.nav{
-    height: 100%
-    width: auto;
-}
-
-#logo{
-    width: 10%;
-    margin-left: 100px;
-    margin-right:50px;
-    height:100%;
-    width: 6.2em;
-}
-
-.nav{
-    margin-left: 400px;
-    font-size: 1.5em;
-    font-weight:700;
-    height: 3em;
-}
-
-.navbar-nav > li {
-    padding-left:5px;
-    padding-right:5px;
-    margin:0.8em 2em 1em 2em ;
-}
-
-.icon-nav{
-    display: none;
-}
-*/
-
-}
 .text-muted{
     color: #BCBBBB;
-}
-
-.text-thin{
-    font-weight: thin;
-}
-
-.title-super{
-    font-size: 68px;
-}
-
-.title-logo{
-    margin-top:20px;
-}
-
-.col-md-3 {
-    height: auto;
-}
-
-
-
-#signature{
-    width:70%;
-    margin-top: 2em;
-    height: auto;
-    float: left;
-}
-
-ul.topNav{
-    /*width: 100%;
-    margin-left: 250px;
-    margin-top: 50px;
-    font-size:2em;
-    list-style:none;
-    padding: 0 1em;
-    float: left;
-    overflow: hidden;*/
-    width:100%;
-    height: 62px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #111;
-}
-
-ul.topNav li {
-    float:left;
-
-}
-
-ul.topNav li a {
-    display:block;
-    position: relative;
-    color: #FFFFFF;
-    text-align: center;
-    text-decoration: none;
-    margin:0 3em 0 3em;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-
-}
-
-ul.topNav li a:hover {
-    background-color: #FFA500;
-}
-
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
-
-    .icon-nav {
-    display: block;
-    position: relative;
-    right:0;
-    top: 0;
-    /*font-size: 2em;*/
-    }
-
-  ul.navbar-nav li:not(:first-child) {
-    display: none;
-    }
-  ul.navbar-nav {
-    float: right;
-    /*display: inline-block;*/
-    }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:680px) {
-  ul.topNav.responsive {
-    position: relative;
-    }
-  /*ul.topNav.responsive {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }*/
-  ul.topNav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topNav.responsive li a {
-    display: block;
-    text-align: left;
-  }
 }
 
 .bigFont {
@@ -288,45 +98,10 @@ ul.topNav li a:hover {
     border-style: solid;
     border-width: 0.35em 0 0.35em 0.45em;
     display: block;
-    height: 0;
-    width: 0;
     left: -1em;
     top: 0.9em;
     position: relative;
-
 }
-
-#bank{
-    position: relative;
-    border:10px solid #FFA500;
-    cursor:pointer;
-
-}
-
-#nlp{
-    position: relative;
-    border:10px solid #FFA500;
-    cursor:pointer;
-
-}
-
-#music{
-    position: relative;
-    /*width: 30%;*/
-    border:10px solid #FFA500;
-    cursor:pointer;
-}
-
-#poetry{
-    position: relative;
-    /*width: 30%;*/
-    border:10px solid #FFA500;
-    /*height: auto;*/
-    cursor:pointer;
-
-}
-
-
 
 #thumbs {
     list-style: none;
@@ -335,12 +110,12 @@ ul.topNav li a:hover {
     overflow:hidden;
     width:100%;
     float:left;
-
 }
 
 #thumbs li a img {
     display: block;
     position: relative;
+    border:10px solid #FFA500;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -348,64 +123,34 @@ ul.topNav li a:hover {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     margin: 10px;
-    padding-top: 5;
-    padding-right: 5;
-    padding-left: 5;
-    padding-bottom: 5;
-    width: 324px;
-    height: 280px;
-    /*width: 100%;*/
-
-}
-
-.js .thumbs arrow-r {
-    width: 32px;
-    height: 32px;
-    background: images/right_arrow.png no-repeat;
-    display: block;
-    background-position: -63px -107px;
-    position: absolute;
-    top: 20px;
-    right: 15px;
-}
-
-.js .thumbs .arrow-r {
-    opacity: 0;
-    right: 0;
+    padding: 5 5 5 5;
+    width: 200px;
+    height: 200px;
 }
 
 @media only screen and (min-width: 668px)
 .thumbs h4 {
     text-align: left;
-    font-size: 18px;
     font-size: 1.8rem;
 }
 
 .thumbs h4, .thumbs .h4 {
-    font-weight: normal;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font: normal 1.6rem;
     line-height: 1.2em;
-
 }
 
 .thumbs .description {
     padding: 0.5em;
     position: relative;
     overflow: hidden;
-
 }
 
 @media only screen and (min-width: 668px)
 .thumbs li {
     float: left;
-    /*width: 314px;*/
     width: 30.1923076923%;
-    /* height: 214px; */
-    /*margin: 3em 4em 3em 4em;*/
     margin: 0 2.4038461538% 2.4038461538% 0;
     background: #FFF;
-    /* padding: 8px; */
     padding: 0.7692307692% 0.7692307692% 0 0.7692307692%;
 }
 
@@ -413,7 +158,6 @@ ul.topNav li a:hover {
 @media only screen and (min-width: 1024px)
 [class^="col-"]:last-child, .row.alt [class^="col-"]:last-child {
     margin: 0;
-
 }
 
 @media only screen and (min-width: 1024px)
@@ -428,7 +172,7 @@ section.main, .portfolio-main section.noise {
 
 .thumbs li {
     float: left;
-    margin: 1em 2em 1em 2em;
+    margin: 2em 2em 2em 5em;
     background: #FFF;
     padding: 1% 1% 1% 1%;
     position: relative;
