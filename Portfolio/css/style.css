@@ -129,4 +129,17 @@ section.main, .portfolio-main section.noise {
     overflow: hidden;
 }
 
+footer{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    background-color: #fafafa;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
 
