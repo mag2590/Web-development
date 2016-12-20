@@ -103,57 +103,6 @@ header nav a:hover {
     position: relative;
 }
 
-#thumbs {
-    list-style: none;
-    display: inline-block;
-    padding: 0 1em;
-    overflow:hidden;
-    width:100%;
-    float:left;
-}
-
-#thumbs li a img {
-    display: block;
-    position: relative;
-    border:10px solid #FFA500;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    margin: 10px;
-    padding: 5 5 5 5;
-    width: 200px;
-    height: 200px;
-}
-
-@media only screen and (min-width: 668px)
-.thumbs h4 {
-    text-align: left;
-    font-size: 1.8rem;
-}
-
-.thumbs h4, .thumbs .h4 {
-    font: normal 1.6rem;
-    line-height: 1.2em;
-}
-
-.thumbs .description {
-    padding: 0.5em;
-    position: relative;
-    overflow: hidden;
-}
-
-@media only screen and (min-width: 668px)
-.thumbs li {
-    float: left;
-    width: 30.1923076923%;
-    margin: 0 2.4038461538% 2.4038461538% 0;
-    background: #FFF;
-    padding: 0.7692307692% 0.7692307692% 0 0.7692307692%;
-}
-
 
 @media only screen and (min-width: 1024px)
 [class^="col-"]:last-child, .row.alt [class^="col-"]:last-child {
@@ -170,25 +119,14 @@ section.main, .portfolio-main section.noise {
     padding: 2em 3%;
 }
 
-.thumbs li {
-    float: left;
-    margin: 2em 2em 2em 5em;
-    background: #FFF;
-    padding: 1% 1% 1% 1%;
-    position: relative;
-    display: inline-block;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-}
 
 .clearfix:after, section:after, .row:after {
     clear: both;
 }
+
+.panel-body{
+    position: relative;
+    overflow: hidden;
+}
+
 

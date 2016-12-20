@@ -3,22 +3,21 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     responsive_images: {
-      dev: {
-        options: {
-          sizes: [{
-            width: 400
-          }, {
-            width: 800
-          }],
-          files: [{
-            expand: true,
-            src: ['*.jpg'],
-            cwd: 'Portfolio/images/',
-            dest:'dist/'
-          }]
-        }
-      }
-    },
+    dev: {
+      options: {
+        engine: 'im',  // <- here
+        sizes: [{
+          width: 200
+        }],
+      }, // <- here
+      files: [{
+        expand: true,
+        src: ['**.{jpg,jpeg,gif,png}'], // <- here
+        cwd: 'images', // <- here
+        dest: 'dist/'
+      }]
+    }
+  },
     concat: {
       options: {
         separator: ';'
