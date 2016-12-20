@@ -17,9 +17,9 @@ jQuery
 Bootstrap
 
 
-Responsive website design 
-Bootstrap grid layout
-responsive menu nav design
-Using jQuery library
-Demo
+References:
+
+1. Udacity courses on responsive images and grid layout
+2. Bootstrap documentaton : http://getbootstrap.com/css/
+
 
