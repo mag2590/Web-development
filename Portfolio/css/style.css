@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Lato', sans-serif;
     color: black;
     font-weight: 300;
@@ -13,7 +13,7 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: #000000;
+    background-color: #000;
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     -ms-transition: height 0.3s;
@@ -81,8 +81,8 @@ header nav a:hover {
     }
 }
 
-.text-muted{
-    color: #BCBBBB;
+.text-muted {
+    color: #bcb;
 }
 
 .bigFont {
@@ -92,7 +92,7 @@ header nav a:hover {
     list-style: none;
 }
 
-.bigFont li:before{
+.bigFont li:before {
     content: "";
     border-color: transparent #111;
     border-style: solid;
@@ -120,16 +120,17 @@ section.main, .portfolio-main section.noise {
 }
 
 
-.clearfix:after, section:after, .row:after {
+.clearfix:after,
+section:after,
+.row:after {
     clear: both;
 }
 
-.panel-body{
-    position: relative;
-    overflow: hidden;
+#portfolio {
+    word-wrap:break-word;
 }
 
-footer{
+footer {
     width: 100%;
     overflow: hidden;
     position: relative;
