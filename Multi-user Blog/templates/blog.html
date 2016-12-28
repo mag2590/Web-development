@@ -1,0 +1,9 @@
+
+<form>
+    <h2>Javascript blogposts</h2>
+        {% for p in posts %}
+            {{p.render() | safe}}
+            <br>
+            <br>
+        {% endfor %}
+</form>
