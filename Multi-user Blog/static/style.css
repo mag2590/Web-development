@@ -1,0 +1,422 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: 300;
+    padding-top:125px;
+
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #000;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+header h1#logo {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+    background-color: #000;
+}
+
+header nav a {
+    line-height: 90px;
+    margin-left: 20px;
+    color: #9fdbfc;
+    font-weight: 700;
+    font-size: 18px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+@media all and (max-width: 660px) {
+    header h1#logo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        height: 80px;
+        line-height: 100px;
+        text-align: center;
+    }
+    header nav {
+        display: block;
+        float: none;
+        height: 30px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    header nav a {
+        line-height: 50px;
+        margin: 0 10px;
+    }
+}
+
+.text-muted {
+    color: #bcb;
+}
+
+
+.wrapper {
+    min-height: calc(100vh - 70px);
+}
+
+.footer {
+    height: 50px;
+}
+
+
+.bigFont {
+    margin: 0.75em 0;
+    padding: 0 1em;
+    font-size: 1.4em;
+    list-style: none;
+}
+
+.bigFont li:before {
+    content: "";
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    [class^="col-"]:last-child, .row.alt [class^="col-"]:last-child {
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #content-detail section:last-child, .contact section:last-child {
+        padding-bottom: 6em !important;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    section.main, .portfolio-main section.noise {
+        padding: 2em 3%;
+    }
+}
+
+.clearfix:after,
+section:after,
+.row:after {
+    clear: both;
+}
+
+#portfolio {
+    word-wrap:break-word;
+}
+
+/* New post page */
+
+.newpost {
+
+}
+
+.newpost__form {
+
+}
+
+.newpost .form__input {
+	font-size: 4rem;
+	font-weight: 700;
+	border: none;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.newpost .form__textarea {
+	min-height: 50rem;
+	border: none;
+	padding-left: 0;
+	font-size: 2.1rem;
+}
+
+.newpost .form__input:focus,
+.newpost .form__textarea:focus {
+	border: none;
+}
+
+.newpost .form__submit {
+
+}
+
+.newpost .form__message {
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+/* Edit post page */
+
+.editpost {
+
+}
+
+.editpost__form {
+
+}
+
+.editpost .form__input {
+	font-size: 4rem;
+	font-weight: 700;
+	border: none;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.editpost .form__textarea {
+	min-height: 50rem;
+	border: none;
+	padding-left: 0;
+	font-size: 2.1rem;
+}
+
+.editpost .form__input:focus,
+.editpost .form__textarea:focus {
+	border: none;
+}
+
+.editpost .form__submit {
+
+}
+
+.editpost .form__message {
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+
+/* Post template */
+
+.post {
+	margin-bottom: 2.0rem;
+}
+
+.post__meta {
+	margin-bottom: 2rem;
+	clear: both;
+	position: relative;
+}
+
+.post .meta__author {
+	width: 5rem;
+	height: 5rem;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.post .meta__author__image {
+	width: auto;
+	height: 100%;
+}
+
+.post .meta__post {
+	vertical-align: middle;
+	display: inline-block;
+	padding-left: 1.5rem;
+}
+
+.post .meta__post__author {
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.post .meta__post__date {
+
+}
+
+.post__title {
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.post__content {
+	font-size: 2.1rem;
+}
+
+.post__like {
+	float: left;
+	margin-bottom: 4rem;
+}
+
+.post .like__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post .like__count {
+	font-size: 2rem;
+	vertical-align: middle;
+	margin-left: 0.5rem;
+}
+
+.post__edit {
+	display: inline-block;
+	margin-left: 2rem;
+
+}
+
+.post__edit .edit__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post__delete {
+	display: inline-block;
+	margin-left: 2rem;
+	padding-left: 2rem;
+	border-left: .1rem solid #d1d1d1;
+
+}
+
+.post__delete .delete__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post__comment {
+	display: inline-block;
+	margin-left: 2rem;
+
+}
+
+.post__comment .comment__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post__dislike {
+	display: inline-block;
+	margin-left: 2rem;
+	padding-left: 2rem;
+	border-left: .1rem solid #d1d1d1;
+}
+
+.post__dislike .dislike__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+
+/* Comments */
+
+.comments {
+	margin-top: 8rem;
+}
+
+.comment {
+	border: .1rem solid #d1d1d1;
+	margin-top: 2.0rem;
+	padding: 2.0rem;
+}
+
+.comment__header {
+	margin-top: 4.0rem;
+	margin-left: 2.0rem;
+}
+
+.comment__meta {
+	margin-bottom: 2rem;
+}
+
+.comment .meta__author {
+	width: 3.6rem;
+	height: 3.6rem;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.comment .meta__author__image {
+	width: auto;
+	height: 100%;
+}
+
+.comment .meta__comment {
+	vertical-align: middle;
+	display: inline-block;
+	padding-left: 0.5rem;
+	font-size: 1.4rem;
+}
+
+.comment .meta__comment__author {
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.comment .meta__comment__date {
+
+}
+
+.comment__content {
+	font-size: 1.8rem;
+}
+
+.comment__delete {
+	display: inline-block;
+	margin-left: 1rem;
+	float: right;
+}
+
+.comment .delete__icon {
+	width: 2.0rem;
+	height: 2.0rem;
+	vertical-align: middle;
+}
+
+.comment__edit {
+	display: inline-block;
+	margin-left: 1rem;
+	float: right;
+}
+
+.comment .edit__icon {
+	width: 2.0rem;
+	height: 2.0rem;
+	vertical-align: middle;
+}
+
+
+
