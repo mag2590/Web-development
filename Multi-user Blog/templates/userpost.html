@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for p in posts %}
+        {% if p.user %}
+            {{ p.render(p.user.key().id()) | safe }}
+        {% else %}
+            {{ p.render(None) | safe }}
+        {% endif %}
+    {% endfor %}
+{% endblock %}
