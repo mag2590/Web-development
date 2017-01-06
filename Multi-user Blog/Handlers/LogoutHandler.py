@@ -14,4 +14,4 @@ class LogoutHandler(MainHandler):
     def get(self):
         self.clear_cookie()
         logged_out = True
-        self.render('login.html',logged_out=logged_out)
+        self.redirect('/blog/login')

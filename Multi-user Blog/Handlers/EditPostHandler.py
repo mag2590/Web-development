@@ -12,9 +12,10 @@ import logging
 
 
 class EditPostHandler(MainHandler):
-    def get(self):
+    def get(self,post_id):
         #retrieve the post to be edited for this user from the database
         key = db.Key.from_path('Post', int(post_id), parent=blog_key())
+        logging.info(key)
         post=db.get(key)
 
         #validate the user for this post before allowing to edit

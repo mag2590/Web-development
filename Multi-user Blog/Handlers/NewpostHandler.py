@@ -5,23 +5,31 @@ import webapp2
 import Handlers.MainHandler
 from Handlers.MainHandler import MainHandler
 import utility
-from Entities.entities import Post, User
-
+from Entities.entities import *
+import logging
 
 class NewpostHandler(MainHandler):
 
     def get(self):
-        self.render('newpost.html')
+        if self.user:
+            logging.info(self.user)
+            self.render("newpost.html")
+        else:
+            error = "You must be signed in to create a post."
+            self.render("base.html", access_error=error)
+
 
     def post(self):
+        if not self.user:
+            return self.redirect('/login')
         subject = self.request.get('subject')
         content = self.request.get('content')
-
         if subject and content:
-            #user_obj = User.get_by_id(int(self.user))
-            p = Post(parent=blog_key(), subject=subject, content=content)
+            p = Post(parent=blog_key(), subject=subject,
+                     content=content,user_id=self.user.key().id())
             p.put()
+            logging.info(p.key().id())
             self.redirect('/blog/%s' % str(p.key().id()))
         else:
-            error = "subject and content bitch!"
+            error = "Are you day dreaming, what do you want me to post?? Please fill up both subject and content before submitting!!"
             self.render("newpost.html",subject=subject, content=content, error=error)

@@ -5,11 +5,11 @@ import Handlers.MainHandler
 from Handlers.MainHandler import MainHandler
 from Entities.entities import Post
 import utility
+from google.appengine.ext import db
 
 
 class BlogHandler(MainHandler):
     def get(self):
-        #get and render all the posted blogs by a user
-        posts = Post.all().order('-created_at')
+        posts = db.GqlQuery(
+            "select * from Post order by created desc limit 10")
         self.render("blog.html",posts=posts)
-

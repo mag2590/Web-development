@@ -24,12 +24,14 @@ class DeletePostHandler(MainHandler):
             logging.info(post)
             post.delete()
 
-            self.redirect('/')
+            self.redirect('/blog/')
 
         elif not self.user:
+            logging.info("Is it reaching here maybe??")
             self.redirect('/blog/login')
 
         else:
+            logging.info("If not above it has to reach here!!")
             key = db.Key.from_path('Post', int(post_id), parent=blog_key())
             post = db.get(key)
 

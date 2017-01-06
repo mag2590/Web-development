@@ -6,7 +6,17 @@ import hashlib
 import jinja2
 import os
 from string import letters
+from google.appengine.ext import db
 import hmac
+import logging
+
+# Model keys
+
+def users_key(group='default'):
+    return db.Key.from_path('users', group)
+
+def blog_key(name='default'):
+    return db.Key.from_path('blogs', name)
 
 template_dir = os.path.join(os.path.dirname(__file__),'templates')
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -32,6 +42,7 @@ def valid_email(email):
 
 
 #Code for password hashing and hmac with secret
+SECRET = 'Chakka'
 
 def make_salt(size=5):
     return ''.join(random.choice(letters) for x in xrange(size))
@@ -45,13 +56,14 @@ def make_pw_hash(username, pw, salt=None):
 def validate_pw(username, password, hash):
     salt = hash.split(',')[0]
     #h  = hash.split(',')[1]
-    return hash == make_pw_hash(username, pw, salt)
+    return hash == make_pw_hash(username, password, salt)
 
 def make_secure_key(key):
     return '%s|%s' % (key,hmac.new(SECRET, key).hexdigest())
 
 def check_secure_key(secure_key):
     key = secure_key.split('|')[0]
+    logging.info(key)
     if secure_key == make_secure_key(key):
         return key
     else:

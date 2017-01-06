@@ -1,18 +1,20 @@
-<html>
-<form method="post">
-    <label>
-        <h2>Subject</h2>
-        <input type="text" name="subject" value="{{subject}}">
-    </label>
-    <br>
-    <br>
-    <label>
-        <h2>Blog</h2>
-        <input type="textarea" name="content" value="{{content}}">
-    </label>
-    <br>
-    <br>
-    <div class="error">{{error}}</div>
-    <button>Submit</button>
-</form>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="newpost">
+        <div class="newpost__form">
+            <form method="post" autocomplete="off">
+                <input autofocus class="form__input" placeholder="Title" type="text" name="subject" value="{{subject}}">
+                <br><br>
+                <textarea class="form__textarea" placeholder="Tell your story..." type="text" name="content">{{content}}</textarea>
+                <br><br>
+                <input class="button-outline form__submit" type="submit" value="publish">
+                <br><br>
+                <span class="form__message">{{error}}</span>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

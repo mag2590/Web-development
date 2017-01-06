@@ -39,7 +39,7 @@
 				<ul class="navigation__list">
 					{% if user %}
 						<li class="list__item">
-                            <a href="/blog/userpost" class="list__item__link">My Posts</a>
+                            <a href="/blog/{{user.key().id()}}/userpost" class="list__item__link">My Posts</a>
                         </li>
                         <li class="list__item">
 							<a href="/blog/newpost" class="list__item__link">Create a new post</a>

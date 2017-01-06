@@ -12,5 +12,5 @@ class UserPostsHandler(MainHandler):
     def get(self,userid):
         if self.user:
             posts = db.GqlQuery(
-                "select * from Post where user_id =:userid  order by created desc")
+                "select * from Post where user_id =:userid  order by created desc",userid=int(userid))
             self.render("userpost.html", posts=posts)
